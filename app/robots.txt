@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+sitemap: https://streamingbokep.pages.dev/sitemap.xml
