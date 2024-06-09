@@ -39,8 +39,8 @@ export async function generateMetadata(
     }
 
     const file = data.result[0];
-    const title = `${file.title} - {SITENAME}`;
-    const description = `${file.title} di {SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`;
+    const title = `${file.title} - ${SITENAME}`;
+    const description = `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`;
     const image = file.splash_img;
     const previousOgImages = (await parent).openGraph?.images || [];
     const previousTwImages = (await parent).twitter?.images || [];
@@ -84,16 +84,16 @@ export default async function Video({ params }: PageProps) {
         const jsonLd2 = {
         '@context': 'https://schema.org',
         '@type': 'Article',
-        headline: `${file.title} - {SITENAME}`,
+        headline: `${file.title} - ${SITENAME}`,
         image: file.splash_img,
-        description: `${file.title} di {SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
+        description: `${file.title} di ${SITENAME} Video Bokep Indo Jepang Jav Barat Simontok Viral Terbaru Bocil Ngentot Jilbab Smp Mama Sma`,
         url: `https://streamingbokep.pages.dev/v/${file.filecode}`,
         datePublished: new Date(
             file.uploaded + ".000Z"
         ).toISOString(),
         publisher: {
             '@type': 'Organization',
-            name: `{SITENAME}`,
+            name: `${SITENAME}`,
             logo: 'https://streamingbokep.pages.dev/favicon.ico'},
             author: {
                 '@type': 'Person',
@@ -112,7 +112,7 @@ export default async function Video({ params }: PageProps) {
         const jsonLd3 = {
             '@context': 'https://schema.org', 
             '@type': 'Book', 
-            'name': `${file.title} - {SITENAME}`, 
+            'name': `${file.title} - ${SITENAME}`, 
             'aggregateRating': {
             '@type': 'AggregateRating',	
                 'ratingValue': '5',	
