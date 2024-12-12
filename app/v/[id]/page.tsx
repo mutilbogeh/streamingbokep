@@ -11,6 +11,7 @@ import { Metadata, ResolvingMetadata } from "next";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { humanDuration, humanSize } from "@/lib/utils";
 import { SITENAME } from "@/lib/constants";
+import Script from "next/script";
 
 import { Button } from "@/components/ui/button";
 import CopyButton from "@/components/copy-button";
@@ -136,7 +137,7 @@ export default async function Video({ params }: PageProps) {
         </section>
             <iframe
                 className="w-full h-[30vh] md:h-[55vh] lg:h-[70vh]"
-                src={`https://ds2play.com/e/${file.filecode}`}
+                src={`https://doodstream.com/e/${file.filecode}`}
                 scrolling="no"
                 title={file.title}
                 frameBorder={0}
@@ -153,7 +154,8 @@ export default async function Video({ params }: PageProps) {
             <h2 className="text-2xl font-bold text-center my-4">
                 Related Video {file.title}
             </h2>
-            <SearchCardList query={file.title.split(" ")[2]} />
+  <Script src="https://js.juicyads.com/jp.php?c=947403z2v256s2x2w2e4z2e4&u=http%3A%2F%2Fwww.juicyads.rocks"/>
+          <SearchCardList query={file.title.split(" ")[2]} />
         </div>
     );
 }
